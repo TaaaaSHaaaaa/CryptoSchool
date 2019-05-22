@@ -1,0 +1,41 @@
+<html>
+
+
+	<head>
+		<meta charset = "utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='task.css') }}">
+        <script type="text/javascript" src ="{{ url_for('static', filename='task.js') }}"></script>
+	<title>
+	Crypto | simple | task | 1
+	</title>
+	</head>
+
+	<div class="huge">
+		<header class="header">
+		</header>
+		<div class="whitespace"></div>
+		<div class="main">
+			<body>
+				<div class="title"><h2>Удачи в решении заданий. Главное, не забывайте включать свой мозг!</h2></div>
+				<div class="task">
+					<div class = "taskbox">
+					<div class = "task-header"><p>Для того чтобы начать свое знакомство с криптографией, я предлагаю рассмотреть простейший метод шифрования: Шифр цезаря.</p></div>
+					<div class = "task-description"><p>Этот метод шифрования использует сдвиг по алфавиту на одно и то же определенное число для всех букв. Данное число обычно называют ключом шифрования.Чтобы понять, как это работает, расшифруйте данное сообщение:</p><code class="task_text">Зтефт уткдптёдца сд ртн хднц! сдзивха, лдздсмг, хтефдссяи лзиха, ечзчц ёдр утпился м мсцифихся)</code><p>Для этого скопируйте его в поле для ввода на <a href = "https://planetcalc.ru/1434/" target="_blank">сайте</a> и введите свой ответ ниже. Если вы все сделали правильно, вам откроется доступ к следующему заданию.</p></div>
+					<div class = "task-body"><form method= "post" class = "answer_textbox_form"><input type="text" autocomplete="off" placeholder="Введите ответ" id="answer_textbox" class ="answer_textbox" name= "answer_textbox"></form><h3 id="feedback"></h3></div>
+					</div>
+                    <form method="post" class ="buttons">
+                        <input onclick="check_if_correct()"  type="button" class="button" name="button_check" id = "button_check" value="Проверить ответ">
+                        <input onclick="go_back()" type="button" class="button" name="button_back" id= "button_back" value="Назад">
+                        <input style="visibility:hidden" onclick="go_forward()" type="button" class="button" id = "button_next_task" name="button_next_task" value="Следующее задание">
+                    </form>
+				</div>
+			</body>
+		</div>
+
+		<footer class="footer"></footer>
+	</div>
+<div id= "answer" class = "answer_section">{{answer}}</div>
+<div id = "task_number" class= "answer_section">{{tn}}</div>
+<div id = "tasks_amount" class= "answer_section">{{task_am}}</div>
+</html>
+

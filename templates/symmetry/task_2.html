@@ -1,0 +1,41 @@
+<html>
+
+
+	<head>
+		<meta charset = "utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='task.css') }}">
+        <script type="text/javascript" src ="{{ url_for('static', filename='task.js') }}"></script>
+	<title>
+	Crypto | symmetry | task | 2
+	</title>
+	</head>
+
+	<div class="huge">
+		<header class="header">
+		</header>
+		<div class="whitespace"></div>
+		<div class="main">
+			<body>
+				<div class="title"><h2>Удачи в решении заданий. Главное, не забывайте включать свой мозг!</h2></div>
+				<div class="task">
+					<div class = "taskbox">
+					<div class = "task-header"><p>Ксорчик(xor)</p></div>
+					<div class = "task-description"><p>Надеюсь, выполнить предыдущее задание не составило труда. Поксорить каждый символ с одной буквой может каждый, а как насчет ключа посложнее: &amp*&lt+VKwN?=1245A67B89C123D456EJ </p><code class="task_text">U^IO/-;/XFFWXVq[RbU@cUSAu][Qd7</code><p>Обратите внимание на то, что длина ключа и зашифрованного сообщения в данном случае совпадают.</p></div>
+					<div class = "task-body"><form method= "post" class = "answer_textbox_form"><input type="text" autocomplete="off" placeholder="Введите ответ" id="answer_textbox" class ="answer_textbox" name= "answer_textbox"></form><h3 id="feedback"></h3></div>
+					</div>
+                    <form method="post" class ="buttons">
+                        <input onclick="check_if_correct()"  type="button" class="button" name="button_check" id = "button_check" value="Проверить ответ">
+                        <input onclick="go_back()" type="button" class="button" name="button_back" id= "button_back" value="Назад">
+                        <input style="visibility:hidden" onclick="go_forward()" type="button" class="button" id = "button_next_task" name="button_next_task" value="Следующее задание">
+                    </form>
+				</div>
+			</body>
+		</div>
+
+		<footer class="footer"></footer>
+	</div>
+<div id= "answer" class = "answer_section">{{answer}}</div>
+<div id = "task_number" class= "answer_section">{{tn}}</div>
+<div id = "tasks_amount" class= "answer_section">{{task_am}}</div>
+</html>
+
